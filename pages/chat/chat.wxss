@@ -1,0 +1,97 @@
+/* pages/chat/chat.wxss */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  /* border: 1px solid #000; */
+}
+
+.messageBox {
+  width: 100%;
+  min-height: 14vw;
+  /* border: 1px solid #000; */
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-bottom: 30rpx;
+}
+
+.messageBox image {
+  width: 12vw;
+  height: 12vw;
+  margin-top: 10rpx;
+}
+
+.messageBox .leftImg {
+  position: absolute;
+  left: 0rpx;
+  margin-left: 20rpx;
+}
+
+.messageBox .rightImg {
+  position: absolute;
+  right: 0rpx;
+  margin-right: 20rpx;
+}
+
+.messageBox view {
+  width: 60vw;
+  min-height: 14vw;
+  /* border: 1px solid #000; */
+  border-radius: 15rpx;
+  margin-left: 18vw;
+  padding: 15rpx;
+  /* white-space: pre-wrap; */
+  word-wrap: break-word;
+  background-color: #e8e8f0;
+}
+
+.messageBox .leftTextBox:after{
+  content: " ";
+  position: absolute;
+  top: 40rpx;
+  right: 82%;
+  border-right: 5px solid #e8e8f0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+.messageBox .rightTextBox:after{
+  content: " ";
+  position: absolute;
+  top: 40rpx;
+  right: 15.7%;
+  border-left: 5px solid #e8e8f0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+.chatView {
+  width: 100%;
+  height: auto;
+}
+
+.bottomView {
+  height: auto;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+}
+
+.chatView .timeBox {
+  height: 40rpx;
+  width: 100%;
+  margin: 10rpx 0rpx;
+  display: flex;
+  align-items: center;
+}
+.chatView .timeBox text {
+  margin: auto;
+  font-size: 25rpx;
+  color: grey;
+}

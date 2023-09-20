@@ -1,0 +1,66 @@
+/* pages/edituser/edituser.wxss */
+.cellGroupClass {
+  height: 300px !important;
+}
+
+.perImgBox {
+  position: relative;
+}
+
+.perImgBox .addImgBox{
+  position: absolute;
+  top:10rpx;
+  right: 15rpx;
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.perImgBox .addImgBox .imgUpload {
+  position: absolute;
+  top: 8rpx;
+  right: 15rpx;
+  z-index: 999;
+  width: 70rpx;
+  height: 70rpx;
+  opacity: 0;
+}
+
+.perImgBox .previewImgBox {
+  width: 100%;
+  /* min-height: 200rpx; */
+  height: 300rpx;
+  position: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.perImgBox .previewImgBox view {
+  width: 40vw;
+  min-height: 200rpx;
+  float: right;
+}
+
+.perImgBox .previewImgBox van-image {
+  float: right;
+}
+
+.btnBox {
+  margin-top: 50rpx;
+}
+
+.btnBox van-col:nth-child(1) {
+  margin-top: 30rpx;
+}
+
+.btnBox van-col:nth-child(2){
+  margin-top: 30rpx;
+}
+
+.exitBtnBox {
+  width: 100%; 
+  height: 100rpx; 
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}

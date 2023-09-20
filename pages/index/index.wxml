@@ -1,0 +1,91 @@
+<view>
+  <view wx:if="{{flag}}" class="init-pageView">
+    <view class="out">
+      <swiper class="in" indicator-dots>
+        <swiper-item>
+            <view style="background-image: url('/resources/images/index/studioBanner1.jpg')"></view>
+          </swiper-item>
+          <swiper-item>
+            <view style="background-image: url('/resources/images/index/studioBanner2.jpg')"></view>
+            <button type="primary" bindtap="click">点击进入</button>
+          </swiper-item>
+      </swiper>
+    </view>
+  </view>
+
+
+  <view class="pageView" wx:if="{{!flag}}">
+    <swiper class="page" indicator-dots autoplay="true" interval="1000" circular>
+      <swiper-item class="box1">
+        <view class="box2">
+          <view class="carousel-container">
+            <text>欢迎来到长路工作室</text>
+            <text>一群志同道合的人，一起奔跑在理想的路上...</text>
+          </view>
+          <image src="/resources/images/index/1.png"></image>
+        </view>
+      </swiper-item>
+      <swiper-item class="box1">
+        <view class="box2">
+          <view class="carousel-container">
+            <text class="">关于我们</text>
+            <text>最好的团队，最好的我们，不负韶华，努力奋斗。</text>
+          </view>
+          <image src="/resources/images/index/2.png"></image>
+        </view>
+      </swiper-item>
+      <swiper-item class="box1">
+        <view class="box2">
+          <view class="carousel-container">
+            <text class="">时光轴</text>
+            <text>时间是温柔的羽毛，把过往的灰尘轻轻弹去。</text>
+          </view>
+          <image src="/resources/images/index/3.png"></image>
+        </view>
+      </swiper-item>
+    </swiper>
+    <van-notice-bar
+      left-icon="volume-o"
+      scrollable 
+      text="本项目是面向学校实验室小助手，项目作者：茅津菁，正在研发当中..."
+    />
+    <view class="content2">
+      <view>实验室数据</view>
+      <view class="box">
+        <view class="infobox">
+            <view>{{teamCounts[0]}}</view>
+            <view>人数</view>
+        </view>
+        <view class="infobox">
+             <view>{{teamCounts[1]}}</view>
+             <view>团队竞赛</view>
+        </view>
+        <view class="infobox">
+            <view>{{teamCounts[2]}}</view>
+            <view>竞赛</view>
+        </view>
+        <view class="infobox">
+            <view>{{teamCounts[3]}}</view>
+            <view>获奖证书</view>
+        </view>
+      </view>
+    </view>
+    <!-- <view class="content2">
+      <view class="box">
+        <view class="infobox"></view>
+        <view class="infobox"></view>
+        <view class="infobox"></view>
+        <view class="infobox"></view>
+      </view>
+    </view>
+    <view class="content2">
+      <view class="box">
+        <view class="infobox"></view>
+        <view class="infobox"></view>
+        <view class="infobox"></view>
+        <view class="infobox"></view>
+      </view>
+    </view> -->
+  </view>
+
+</view>

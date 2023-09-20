@@ -1,0 +1,113 @@
+<!--pages/three/three.wxml-->
+<view class="pageView">
+  <view class="topView">
+    <view class="leftBox">
+      <image src="{{!isLogin || userInfo.avatar=='' ? '/resources/images/my/nlogin-avator.png' : userInfo.avatar}}"></image>
+    </view>
+    <view wx:if="{{!isLogin}}" class="nlogin-rightbox rightBox">
+      <view bindtap="clickLogin">登录</view>
+      <view style="margin: 0rpx 20rpx;">/</view>
+      <view bindtap="clickRegister">注册</view>
+      <!-- <image src="/resources/images/jt.png"></image> -->
+    </view>
+    <view wx:if="{{isLogin}}" class="rightBox">
+      <view>用户名：{{userInfo.userName}}</view>
+      <image src="/resources/images/jt.png" bindtap="clickNavTo" data-nav="edituser"></image>
+   </view>
+  </view>
+  <view class="contentView">
+    <view class="calendarBox">
+      <!-- 图片遮盖罩 登录之后才可解锁 -->
+      <view wx:if="{{!isLogin}}" class="lockBox">
+        <image src="/resources/images/my/lock.png"></image>
+      </view>
+      <view class="title">Github 贡献日历</view>
+      <image src="https://ghchart.rshah.org/changlua"></image>
+    </view>
+    <view class="tabsBox">
+      <view class="tabBox" data-index="{{index}}">
+        <image class="tabicons" src="/resources/images/studio-icon.png"></image>
+        <text>后台管理系统</text>
+        <image bindtap="clickNavTo" data-nav="manage" src="/resources/images/jt.png"></image>
+      </view>
+      <view class="tabBox" data-index="{{index}}">
+        <image class="tabicons" src="/resources/icons/qq.svg"></image>
+        <text>作者茅津菁，QQ：939974883</text>
+        <image src="/resources/images/jt.png"></image>
+      </view>
+      <view class="tabBox" data-index="{{index}}">
+        <image class="tabicons" src="/resources/icons/github.svg"></image>
+        <text>作者Github：https://github.com/changlua</text>
+        <image src="/resources/images/jt.png"></image>
+      </view>
+      <!-- <block wx:for="{{tabs}}">
+        <view class="tabBox" data-index="{{index}}">
+          <image class="tabicons" src="{{item.image1}}"></image>
+          <text>{{item.name}}</text>
+          <image src="/resources/images/jt.png"></image>
+        </view>
+      </block> -->
+    </view>
+  </view>
+</view>
+
+
+<!-- 登录弹出组件 -->
+<van-popup class="loginPop" show="{{ loginShow }}" bind:close="onCloseLogin" position="top">
+  <form bindsubmit="login" bindreset="clearLoginForm">
+    <van-cell-group>
+      <text style="color: grey;margin-left: 20px;">登录</text>
+      <van-field name="username" value="{{loginForm.username}}" clearable label="用户名" placeholder="请输入用户名" />
+    </van-cell-group>
+    <van-cell-group>
+      <van-field name="password" value="{{loginForm.password}}" type="password" clearable label="密码" placeholder="请输入密码" />
+    </van-cell-group>
+    <van-cell-group>
+      <view class="verCodeBox">
+        <van-field name="code" value="{{loginForm.code}}" clearable label="验证码" placeholder="请输入验证码" />
+        <image width="50" height="30" src="{{base64Img}}" bindtap="refreshVerCode" />
+      </view>
+    </van-cell-group>
+    <van-row>
+      <van-col span="12">
+        <van-button custom-style="margin: 10rpx 0rpx 5rpx 180rpx;height:70rpx;" type="info" form-type="reset">清空</van-button>
+      </van-col>
+      <van-col span="12">
+        <van-button custom-style="margin: 10rpx 180rpx 5rpx 0rpx;height:70rpx;" type="danger" form-type="submit">登录</van-button>
+      </van-col>
+    </van-row>
+  </form>
+</van-popup>
+
+<!-- 注册弹出组件 -->
+<van-popup class="loginPop" show="{{ registerShow }}" bind:close="onCloseRegister" position="top">
+  <form bindsubmit="register" bindreset="clearRegisterForm">
+    <van-cell-group>
+      <text style="color: grey;margin-left: 20px;">注册</text>
+      <van-field name="username" value="{{registerForm.username}}" clearable label="用户名" placeholder="请输入用户名" />
+    </van-cell-group>
+    <van-cell-group>
+      <van-field name="password" value="{{registerForm.password}}" type="password" clearable label="密码" placeholder="请输入密码" />
+    </van-cell-group>
+    <van-cell-group>
+      <view class="verCodeBox">
+        <van-field name="invitationCode" value="{{registerForm.invitationCode}}" clearable label="邀请码" placeholder="请输入邀请码" />
+      </view>
+    </van-cell-group>
+    <van-row>
+      <van-col span="12">
+        <van-button custom-style="margin: 10rpx 0rpx 5rpx 180rpx;height:70rpx;" type="info" form-type="reset">清空</van-button>
+      </van-col>
+      <van-col span="12">
+        <van-button custom-style="margin: 10rpx 180rpx 5rpx 0rpx;height:70rpx;" type="danger" form-type="submit">注册</van-button>
+      </van-col>
+    </van-row>
+  </form>
+</van-popup>
+
+
+<!-- 引入loading组件 -->
+<import src ="../template/template.wxml"/>
+<template is="loading" data="{{isLoading}}"/>
+<template is="dialog"/>
+<template is="toast"/>

@@ -1,0 +1,59 @@
+<view class="TopView">
+  <form bindsubmit="editUser" bindreset="clearEditUserForm">
+    <van-cell-group>
+      <van-field name="realName" value="{{editUserForm.realName}}" clearable label="姓名" placeholder="请输入姓名" />
+    </van-cell-group>
+    <van-cell-group>
+      <van-field value="{{gradeFieldValue}}" is-link readonly label="年级" placeholder="请选择所在年级" bind:tap="onGradeCasClick" />
+      <van-popup show="{{ gradeShow }}" round position="bottom">
+        <van-cascader wx:if="{{ gradeShow }}" value="{{ gradeCascaderValue }}" title="请选择所在年级" field-names="{{gradeNames}}" options="{{ gradeOptions }}" bind:close="onGradeCasClose" bind:finish="onGradeCasFinish" />
+      </van-popup>
+    </van-cell-group>
+    <van-cell-group>
+      <van-field value="{{  majorFieldValue}}" is-link readonly label="专业" placeholder="请选择所在专业" bind:tap="onMajorCasClick" />
+      <van-popup show="{{ majorShow }}" round position="bottom">
+        <van-cascader wx:if="{{ majorShow }}" value="{{ majorCascaderValue }}" title="请选择所在专业" field-names="{{majorNames}}" options="{{ majorOptions }}" bind:close="onMajorCasClose" bind:finish="onMajorCasFinish" />
+      </van-popup>
+    </van-cell-group>
+    <van-cell-group>
+      <van-field name="description" value="{{editUserForm.description}}" clearable label="个人介绍" type="textarea" autosize placeholder="请输入个人介绍" />
+    </van-cell-group>
+    <van-cell-group class="perImgBox">
+      <van-field clearable label="个人照片" readonly="true"/>
+      <image class="addImgBox" src="/resources/icons/add.svg">
+        <van-uploader
+            class="imgUpload"
+            style=""
+            max-count="1"
+            multiple="{{false}}"
+            use-before-read
+            bind:before-read="beforeRead"
+            bind:after-read="afterRead"
+            upload-text='上传图片'
+          />
+      </image>
+      <view class="previewImgBox">
+        <!-- <van-image style="float: right;" width="200rpx" height="{{true ? '260rpx' : '200rpx'}}"  /> -->
+          <view></view>
+          <van-image width="200rpx" height="{{editUserForm.perImg == '' || editUserForm.perImg == undefined ? '200rpx' : '260rpx'}}" src="{{editUserForm.perImg}}" />
+      </view>
+    </van-cell-group>
+    <van-row class="btnBox">
+      <van-col  span="12">
+        <van-button custom-style="width: 200rpx;height:80rpx;margin: 20rpx 0rpx 0rpx 100rpx;" round="true" type="primary" form-type="reset">清  空</van-button>
+      </van-col>
+      <van-col span="12">
+        <van-button custom-style="width: 200rpx;height:80rpx;margin: 20rpx 0rpx 0rpx 80rpx;" round="true" type="info" form-type="submit">保存编辑</van-button>
+      </van-col>
+    </van-row>
+  </form>
+  <view class="exitBtnBox">
+    <van-button custom-style="width: 550rpx;height:70rpx;" type="danger" bindtap="clickExit">退出登录</van-button>
+  </view>
+</view>
+
+<!-- 引入loading组件 -->
+<import src ="../template/template.wxml"/>
+<template is="loading" data="{{isLoading}}"/>
+<template is="dialog"/>
+<template is="toast"/>

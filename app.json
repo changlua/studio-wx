@@ -1,0 +1,73 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/manage/manage",
+    "pages/team/team",
+    "pages/edituser/edituser",
+    "pages/template/template",
+    "pages/membershow/membershow",
+    "pages/message/message",
+    "pages/chat/chat"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 5
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "iconPath": "resources/images/studio-icon.png",
+        "selectedIconPath": "resources/images/studio-icon.png",
+        "pagePath": "pages/index/index",
+        "text": "实验室"
+      },
+      {
+        "iconPath": "resources/images/team-icon.png",
+        "selectedIconPath": "resources/images/team-icon.png",
+        "pagePath": "pages/team/team",
+        "text": "团队成员"
+      },
+      {
+        "iconPath": "resources/images/message-icon.png",
+        "selectedIconPath": "resources/images/message-icon.png",
+        "pagePath": "pages/message/message",
+        "text": "消息"
+      },
+      {
+        "iconPath": "resources/images/my-icon.png",
+        "selectedIconPath": "resources/images/my-icon.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": { 
+    "van-popup": "@vant/weapp/popup/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-cascader": "@vant/weapp/cascader/index",
+    "van-loading": "@vant/weapp/loading/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-skeleton": "@vant/weapp/skeleton/index"
+  }
+}

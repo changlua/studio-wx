@@ -1,0 +1,70 @@
+<view class="container"> 
+  <view class="topView">
+      <view class="imgBox">
+        <van-image
+          width="8rem"
+          height="11rem"
+          fit="fill"
+          src="http://pictured-bedtest.oss-cn-beijing.aliyuncs.com/test/studio/d167b054-4158-474b-8e9f-91bba112b569.png"
+        />
+      </view>
+      <view class="memBasicBox">
+        <text style="font-size: medium;">茅津菁</text>
+        <view class="basicBox">
+          <view>
+            <text>年龄：24岁</text>
+            <text style="margin-left: 50rpx;">性别：男</text>
+          </view>
+          <view>单位：南京工程学院 </view>
+          <view>岗位：Java后端开发工程师</view>
+          <view>电话：137738231212</view>
+          <view>邮箱：939974883@qq.com</view>
+        </view>
+        <view>
+          <van-button custom-style="font-size: 24rpx;margin-left: 5rpx" bindtap="navToMessage" size="mini" type="info">留言</van-button>
+        </view>
+      </view>
+  </view>
+  <van-divider />
+  <view class="introBox">
+    <view class="title">个人介绍</view>
+    <view class="content">
+      <text >有责任心，平时有整理、记录博客的习惯，能够快速融入团队进行合作开发。
+希望能够进入一家具有较好技术氛围的公司进行实习，能够给自己实际业务场景，实际锻炼并磨练提升自己的能力，与此同时也争取能够为公司创造更大的价值</text>
+    </view>
+  </view>
+  <van-divider />
+  <view class="experBox">
+    <view class="title">个人经历（荣誉）</view>
+    <view class="content">
+      <!-- text标签中;换行 -->
+      <text>2023 年参加第十三届蓝桥杯 B 组国三;
+        2022 年加入仿生实验室参与中国赛机器人先进视觉赛-3D 识别项目国赛三等奖;
+        2021 下半年参加线上阿里云云效 83 行代码挑战赛最终排名 55;
+        2022 年 5-6 月参加线上字节跳动第三届后端青训营获得结营证书;
+        2021 年参与工作室大创项目顺利结题并参与工作室后台系统开发，已开源(见项目 1);
+        2020 下半年第十一届蓝桥杯国赛 Java 三等奖;
+      </text>
+    </view>
+  </view>
+  <van-divider />
+  <view class="socialBox">
+    <view class="title">社交媒体</view>
+    <view class="socialItem">
+      <image src="/resources/icons/qq.svg"></image>
+      <text>939974883</text>
+    </view>
+    <view class="socialItem">
+      <image src="/resources/icons/weixin.svg"></image>
+      <text>shiChangLuya</text>
+    </view>
+    <view class="socialItem">
+      <image src="/resources/icons/github.svg"></image>
+      <text>https://github.com/changlua</text>
+    </view>
+    <view class="socialItem">
+      <image src="/resources/icons/csdn.svg"></image>
+      <text>https://changlu.blog.csdn.net/</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+<template name="loading">
+  <!-- 组件 -->
+  <van-loading wx:if="{{isLoading}}" style="position: fixed;top: 42%;left: 42%;" type="spinner" color="#1989fa" vertical>加载中..</van-loading>
+</template>
+
+<template name="dialog">
+  <!-- 组件 -->
+  <van-dialog id="van-dialog" />
+</template>
+
+<template name="toast">
+  <van-toast id="van-toast" />
+</template>
+

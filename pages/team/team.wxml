@@ -1,0 +1,79 @@
+<van-icon class="iconfont" class-prefix="icon" name="weixin" />
+<!-- 顶部部分用于实现刷新 -->
+<view style="height: 300rpx;width: 100%;border: 1px solid rgba(255, 255, 255, 0);position: fixed; z-index: 1001;"></view>
+<view class="container">
+  <!-- <view class="toptitle">
+    <text>团队成员</text>
+  </view> -->
+  <scroll-view scroll-y="true" style="height: {{height+'px'}};" scroll-into-view="{{detail}}" scroll-with-animation="true">
+    <van-skeleton loading="{{skeletonLoading}}" title row="19">
+      <block wx:for="{{membersArr}}">
+        <view class="members-container" id="nav{{index}}">
+          <view class="title">{{item.grade}}</view>
+          <view class="membersbox">
+            <block wx:for="{{item.members}}">
+              <view bindtap="toMemberShow" class="member">
+                <view class="imginfobox">
+                  <view class="imgbox">
+                    <image src="{{item.perImg}}" alt="" />
+                  </view>
+                  <view class="descbox">
+                    <view>{{item.realName}}</view>
+                    <view>身份：{{item.roleName}}</view>
+                    <view>专业：{{item.majorName}}</view>
+                  </view>
+                </view>
+                <view class="introbox">
+                  {{item.description}}
+                </view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </block>
+    </van-skeleton>
+  </scroll-view>
+
+  <scroll-view scroll-y="true" class="navigatorbox" scroll-with-animation="true">
+    <block wx:for="{{navgiteArr}}">
+      <view data-navid="{{item.navToId}}" bindtap="click">{{item.name}}</view>
+    </block>
+    <!-- <view>2022级</view>
+    <view>2021级</view> -->
+  </scroll-view>
+
+  <!-- <view class="members-container">
+    <view class="title">指导老师</view>
+    <view class="membersbox">
+      <view class="member">
+         <view class="imginfobox">
+            <view class="imgbox">
+              <image src="http://pictured-bedtest.oss-cn-beijing.aliyuncs.com/test/studio/d167b054-4158-474b-8e9f-91bba112b569.png" alt=""/>
+            </view>
+            <view class="descbox">
+              <view>茅津菁</view>
+              <view>身份：指导老师</view>
+              <view>专业：计算机应用技术</view>
+            </view>
+         </view>
+
+      </view>
+      <view class="member">
+        123
+      </view>
+      <view class="member">
+        123
+      </view>
+      <view class="member">
+        123
+      </view>
+      <view class="member">
+        123
+      </view>
+    </view>
+  </view> -->
+</view>
+
+<!-- 引入loading组件 -->
+<import src ="../template/template.wxml"/>
+<template is="toast"/>

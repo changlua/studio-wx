@@ -1,0 +1,27 @@
+<view class="container">
+<view class="chatView">
+  <view class="timeBox">
+    <text>12:55</text>  
+  </view>
+  <view class="messageBox">
+      <image src="/resources/images/my/nlogin-avator.png" class="leftImg"></image>
+      <view class="leftTextBox">1232132323333333333333333322222222222222222222222222222222222</view>
+  </view>
+  <view class="messageBox">
+      <image src="/resources/images/my/nlogin-avator.png" class="rightImg"></image>
+      <view class="rightTextBox">1232132323333333333333333322222222222222222222222222222222222</view>
+  </view>
+</view>
+  <view class="bottomView">
+    <van-search
+      value="{{ value }}"
+      use-left-icon-slot="false"
+      placeholder="请输入聊天内容"
+      show-action
+      bind:search="onSearch"
+      bind:cancel="onCancel"
+      action-text="发送"
+    />
+  </view>
+
+</view>

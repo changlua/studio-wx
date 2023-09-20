@@ -1,0 +1,174 @@
+/* pages/one/one.wxss */
+.init-pageView{
+  width: 100%;
+  height: 100vh;
+  background-color: darkgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.init-pageView .out{
+  width: 100%;
+  height: 100%;
+  /* margin: 30px; */
+  /* margin-top: 10px; */
+}
+.init-pageView .in{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.init-pageView .in swiper-item view{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  /* border: 1px solid #000; */
+  background-color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* z-index: -1; */
+}
+
+/* .init-pageView .a{
+  width: 100%;
+  margin: 0px auto;
+  font-size: 30px;
+}
+.init-pageView .b{
+  width: 100%;
+  margin: -20px;
+} */
+
+.init-pageView swiper-item button {
+  width: 350rpx;
+  height: 100rpx;
+  position: relative;
+  left: 100rpx;
+  bottom: -70vh;
+  margin: 0;
+}
+
+
+/* 第二个栏目 */
+.pageView {
+  width: 100%;
+  height: 100%;
+  /* background-color: aquamarine; */
+}
+
+
+.pageView .page{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999; */
+}
+
+.pageView .box1{
+  /* width: 100%;
+  height: 100%;  */
+}
+.pageView .box2{
+  width: 100%;
+  height: 200px; 
+}
+.pageView .box2 image {
+  height: 200px;
+  width: 100%;
+}
+
+.pageView .carousel-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  color: white;
+  font-weight: bold;
+}
+
+.pageView .carousel-container text:nth-child(1) {
+  font-size: 20px;
+}
+
+.pageView .carousel-container text:nth-child(2) {
+  margin-top: 10px;
+  font-size: 8px;
+}
+
+.pageView .content2 {
+  padding: 15px 0px;
+  /* border: 1px solid #000; */
+  text-align: center;
+  justify-content: center;
+}
+
+.pageView .content2 view::after{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: #18d26e;
+  bottom: 290px;
+  left: calc(50% - 20px);
+}
+
+.pageView .content2 .box{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /* 网格行与列之间的间隙 */
+  gap: 20px 10px;
+  margin-top: 10px;
+}
+
+.pageView .content2 .infobox {
+  width: 75px;
+  height: 75px;
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* border-color: rgba(139, 112, 61, 0.815); */
+  border: 1px solid rgba(0,0,0,.05);
+  box-shadow: 4px 4px 40px rgb(0 0 0 / 5%);
+  border-radius: 15px;
+}
+
+.pageView .content2 .infobox view:nth-child(1) {
+  font-size: 25px;
+  color:  #18d26e;
+
+}
+
+.pageView .content2 .infobox view:nth-child(2) {
+  font-size: 12px;
+  font-weight: 200px;
+}
+
+/* 通知消息 */
+van-notice-bar {
+  --notice-bar-height: 20rpx
+  --notice-bar-font-size: 10px;
+  --notice-bar-icon-size: 12px
+  /* --notice-bar-line-height: 30rpx */
+}

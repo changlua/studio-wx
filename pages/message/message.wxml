@@ -1,0 +1,76 @@
+<view class="container">
+    <view class="topBox">
+      <view class="funcsBox">
+        <view class="funcBox">
+          <image src="/resources/icons/pinglun.svg"></image>
+          <view>评论</view>
+        </view>
+        <view class="funcBox">
+          <image src="/resources/icons/dianzan.svg"></image>
+          <view>点赞</view>
+        </view>
+        <view class="funcBox">
+          <image src="/resources/icons/fensi.svg"></image>
+          <view>粉丝</view>
+        </view>
+      </view>
+    </view>
+    <view class="msgsBox">
+      <!-- <van-empty description="暂无消息" /> -->
+      <view class="item">
+        <view class="leftBox">
+          <image src="/resources/images/my/nlogin-avator.png"></image>
+        </view>
+        <view class="rightBox">
+          <view>茅津菁</view>
+          <view>2分钟前回复</view>
+          <view>茅津菁11111111111111111111111111111111111111111111111111111111111</view>
+          <!-- <image src="/resources/images/my/nlogin-avator.png"></image> -->
+        </view>
+      </view>
+      <view class="item">
+        <view class="leftBox">
+          <image src="/resources/images/my/nlogin-avator.png"></image>
+        </view>
+        <view class="rightBox">
+          <view>丈母娘</view>
+          <view>1秒钟前回复</view>
+          <view>快回家!!!</view>
+          <!-- <image src="/resources/images/my/nlogin-avator.png"></image> -->
+        </view>
+      </view>
+      <view class="item">
+        <view class="leftBox">
+          <image src="/resources/images/my/nlogin-avator.png"></image>
+        </view>
+        <view class="rightBox">
+          <view>戚贵健</view>
+          <view>2分钟前回复</view>
+          <view>快回宿舍!!!</view>
+          <!-- <image src="/resources/images/my/nlogin-avator.png"></image> -->
+        </view>
+      </view>
+      <view class="item">
+        <view class="leftBox">
+          <image src="/resources/images/my/nlogin-avator.png"></image>
+        </view>
+        <view class="rightBox">
+          <view>邵岭</view>
+          <view>2分钟前回复</view>
+          <view>紧急回宿舍！！！</view>
+          <!-- <image src="/resources/images/my/nlogin-avator.png"></image> -->
+        </view>
+      </view>
+      <view class="item">
+        <view class="leftBox">
+          <image src="/resources/images/my/nlogin-avator.png"></image>
+        </view>
+        <view class="rightBox">
+          <view>涂延坤</view>
+          <view>2分钟前回复</view>
+          <view>紧急回宿舍！！！</view>
+          <!-- <image src="/resources/images/my/nlogin-avator.png"></image> -->
+        </view>
+      </view>
+    </view>
+</view>
