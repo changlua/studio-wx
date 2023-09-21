@@ -17,6 +17,8 @@
 
 本次项目是学校大四上的实训项目大作业，自己命题，我就连着之前的实验室系统来实现了微信小程序版本。
 
+前后端项目地址：[Studio-Vue](https://gitee.com/changluJava/studio-vue)
+
 ---
 
 # 项目简介
